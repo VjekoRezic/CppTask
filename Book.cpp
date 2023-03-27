@@ -137,15 +137,16 @@ void Book::loan_end() {
 }
 
 std::string curr_date(){
-    time_t curr_time;
-    tm * curr_tm;
-    char date_string[100];
+    time_t raw_time;
+    struct tm * time_info;
+    char buffer[80];
 
-    curr_tm = localtime(&curr_time);
+    time(&raw_time);
+    time_info = localtime(&raw_time);
 
-    strftime(date_string, 50, "%d %m %Y", curr_tm);
-
-    return date_string;
+    strftime(buffer, sizeof(buffer), "%d.%m.%Y", time_info);
+    std::string str(buffer);
+    return str;
 }
 
 bool Book::operator==(const Book &obj) {
@@ -164,6 +165,7 @@ void Book::print_books_by(std::vector<Book> &vec, std::string author) {
     std::cout<<"Author : "<<author<<std::endl;
     for(auto &book:vec){
         if(std::find(book.authors.begin(), book.authors.end(),author) != book.authors.end()){
+            std::cout<<"**********************************"<<std::endl;
             std::cout<<book<<std::endl;
         }
     }

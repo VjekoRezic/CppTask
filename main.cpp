@@ -7,9 +7,9 @@ int main() {
     vec.push_back(Book::add_book());
     vec.push_back(Book::add_book());
     vec.push_back(Book::add_book());
-    vec.at(1).loan_start();
+    vec.at(0).loan_start();
 
-    Book::print_books_by(vec, "Vjeko");
+    Book::print_books_by(vec, "JRRT");
 
 
     return 0;
