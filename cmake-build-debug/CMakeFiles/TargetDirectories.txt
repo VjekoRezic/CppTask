@@ -1,3 +1,0 @@
-/home/vjekor/CLionProjects/FirstTask/cmake-build-debug/CMakeFiles/FirstTask.dir
-/home/vjekor/CLionProjects/FirstTask/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vjekor/CLionProjects/FirstTask/cmake-build-debug/CMakeFiles/rebuild_cache.dir
